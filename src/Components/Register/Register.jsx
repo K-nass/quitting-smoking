@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -11,6 +11,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
   const [isLoading, setIsLoading] = useState(false)
+  const [apiError, setApiError] = useState(null)
+  let navigate = useNavigate()
 
 
   let validationSchema = Yup.object().shape({
@@ -23,15 +25,16 @@ export default function Register() {
 
   async function handleRegister(values) {
     setIsLoading(true)
-
     await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup', values)
       .then((res) => {
         setIsLoading(false)
-        console.log(res.data.message);
+        if(res.data.message === 'success') {
+          navigate('/login')
+        }
       })
       .catch((res) => {
         setIsLoading(false)
-        console.log(res)
+        setApiError(res.response.data.message)
       })
   }
 
@@ -120,7 +123,14 @@ export default function Register() {
         onBlur={formik.handleBlur}
       />
 
-      {isLoading ? <button className='btn btn-info mt-3 text-white fw-bold'><i className="fa-solid fa-spinner"></i></button> : <button type='submit' className='btn btn-info mt-3 text-white fw-bold'>Register</button>}
+      <div className='mt-2 mb-2'>
+        {apiError ? <span className='text-danger'>{apiError}!</span> : null}
+      </div>
+
+      <div className="d-flex align-items-center">
+        {isLoading ? <button className='btn btn-info mt-3 text-white fw-bold'><i className="fa-solid fa-spinner me-3"></i></button> : <button type='submit' className='btn btn-info mt-3 me-3 text-white fw-bold'>Register</button>}
+        <Link to={'/Login'} className='text-primary'>Already have an account?</Link>
+      </div>
 
     </form>
   )
