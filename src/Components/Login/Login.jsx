@@ -22,6 +22,7 @@ export default function Login() {
         if (res.data.message === 'success') {
           localStorage.setItem('loginToken', res.data.token)
           navigate('/')
+          setIsLoading(true)
         }
       })
       .catch((res) => {

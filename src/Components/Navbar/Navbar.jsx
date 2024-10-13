@@ -4,6 +4,7 @@ import style from './Navbar.module.css'
 import logo from '../../../public/logo.svg'
 
 
+
 export default function Navbar() {
   return (
     <nav className='bg-info'>
