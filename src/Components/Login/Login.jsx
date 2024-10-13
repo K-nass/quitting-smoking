@@ -19,13 +19,14 @@ export default function Login() {
     await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signin', values)
       .then((res) => {
         setIsLoading(false)
-        if(res.data.message === 'success') {
+        if (res.data.message === 'success') {
+          localStorage.setItem('loginToken', res.data.token)
           navigate('/')
         }
       })
       .catch((res) => {
         setIsLoading(false)
-        console.log(res);
+        setApiError(res.response.data.message)
       })
   }
 

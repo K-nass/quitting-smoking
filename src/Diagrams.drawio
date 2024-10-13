@@ -1,0 +1,82 @@
+<mxfile host="65bd71144e">
+    <diagram id="9eyBxXMdM7D980cmFh3l" name="Page-1">
+        <mxGraphModel dx="747" dy="-541" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="24" value="&#10;&lt;h3&gt;Example Output (For 20 Cigarettes/Day Smoker):&lt;/h3&gt;&lt;p&gt;If the user inputs that they smoke 20 cigarettes per day, here’s an example of the generated plan:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Your Personalized Reduction Plan:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Start with reducing 1 cigarette every 2 days.&lt;/li&gt;&lt;li&gt;By the end of week 1, aim to smoke 16 cigarettes per day.&lt;/li&gt;&lt;li&gt;By the end of week 2, aim to smoke 12 cigarettes per day.&lt;/li&gt;&lt;li&gt;Keep following this pattern until you reach 0 cigarettes on your quit date (within 5-6 weeks).&lt;/li&gt;&lt;li&gt;During this time, replace smoking breaks with drinking water or going for a short walk.&lt;/li&gt;&lt;/ul&gt;&#10;&#10;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="1110" width="530" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="34" target="35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Home&lt;br&gt;index true Home&lt;br&gt;starting with&amp;nbsp;&lt;br&gt;simple quote" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1228" y="1391" width="174" height="136" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="No" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="35" target="39">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Yes" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="35" target="41">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Home&lt;br&gt;is user has login&lt;br&gt;token?" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1215" y="1613" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1535" y="1653" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="No" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="41" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="is user submit&amp;nbsp;&lt;br&gt;form smoking?" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="937" y="1594.5" width="190" height="177" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="43" target="47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;br&gt;Home&lt;br&gt;form&lt;/div&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Number of cigarettes smoked per day&lt;/span&gt;&lt;/li&gt;&lt;li&gt;How long they have been smoking&lt;/li&gt;&lt;li&gt;Their motivation level (low, medium, high)&lt;/li&gt;&lt;/ol&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="875.5" y="1855" width="313" height="137" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="47" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;br&gt; Quit Smoking Reduction Plan" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="937" y="2047" width="202" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&amp;gt;=20" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="49" target="51">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&amp;gt;10 &amp;amp;&amp;amp; &amp;lt; 20" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="49" target="53">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="&amp;gt;10" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="49" target="55">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="cigarettes ?" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1272" y="2035.5" width="157" height="121" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="&lt;br&gt; Reduce by 1 cigarette&lt;br&gt;every two days&amp;nbsp;&lt;br&gt;at the of weak 6&lt;br&gt;0 cigarettes&lt;br&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1254.25" y="1792" width="194.5" height="116" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="53" target="59">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;br&gt;Reduce by 1 cigarette&lt;br&gt;every three days&amp;nbsp;&lt;br&gt;at the of weak 6&lt;br&gt;0 cigarettes" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1649" y="2044" width="207.5" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="&lt;br&gt;Reduce by 1 cigarette&lt;br&gt;every weak&lt;br&gt;at the of weak 6&lt;br&gt;0 cigarettes" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="1237.5" y="2319" width="226" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=14;" edge="1" parent="1" source="59" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="progress tracker&amp;nbsp;&lt;br&gt;&lt;br&gt;input form where they log how many cigarettes they smoked each day and see how their smoking decreases over time." style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="2043" y="2015.63" width="300" height="160.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;strong&gt;Reward milestones&lt;/strong&gt;: Celebrate every week of progress, rewarding themselves when they stick to their goals." style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="2035" y="1741" width="316" height="125" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
