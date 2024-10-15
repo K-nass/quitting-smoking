@@ -5,6 +5,7 @@ import Register from './Components/Register/Register'
 import 'font-awesome/css/font-awesome.min.css';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
+import LoginContextProvider from './Components/LoginContext/LoginContext';
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={routes}></RouterProvider>
+      <LoginContextProvider>
+        <RouterProvider router={routes}></RouterProvider>
+      </LoginContextProvider>
     </>
   )
 }

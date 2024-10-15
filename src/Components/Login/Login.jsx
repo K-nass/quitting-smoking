@@ -1,14 +1,20 @@
 import axios from 'axios'
 import { Formik, useFormik } from 'formik'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+import { loginContext } from '../LoginContext/LoginContext'
+
 
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false)
   const [apiError, setApiError] = useState(null)
+  const { loginToke, setLoginToken } = useContext(loginContext)
   let navigate = useNavigate()
+
+
+
 
   let validationSchema = Yup.object().shape({
     email: Yup.string().email('Email is not valid').required('Email is required.'),
@@ -20,7 +26,7 @@ export default function Login() {
       .then((res) => {
         setIsLoading(false)
         if (res.data.message === 'success') {
-          localStorage.setItem('loginToken', res.data.token)
+          setLoginToken(localStorage.setItem('loginToken', res.data.token))
           navigate('/')
           setIsLoading(true)
         }
@@ -74,7 +80,7 @@ export default function Login() {
       </div>
 
       <div className="d-flex align-items-center">
-        {isLoading ? <button className='btn btn-info mt-3 text-white fw-bold'><i className="fa-solid fa-spinner me-3"></i></button> : <button type='submit' className='btn btn-info mt-3 me-3 text-white fw-bold'>Login</button>}
+        {isLoading ? <button className='btn btn-info mt-3 text-white fw-bold'><i className="fa-solid fa-spinner"></i></button> : <button type='submit' className='btn btn-info mt-3 me-3 text-white fw-bold'>Login</button>}
       </div>
     </form>
 
